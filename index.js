@@ -1,23 +1,24 @@
 import express from "express";
-import serverless from "serverless-http";
 
 const app = express();
 app.use(express.json());
 
-// Root route
+app.listen(5000, () => {
+  console.log("Server is Online now 🚀");
+});
+
+// Root Route
 app.get("/", (req, res) => {
   res.send({ message: "Welcome to Create Account API 🚀" });
 });
 
 // Create Account API
 app.post("/create-account", (req, res) => {
-  const { username, email, password, number } = req.body;
+  const { username, email, password, number } = req.body; 
   let errors = [];
 
   if (!username || !email || !password || !number) {
-    return res
-      .status(400)
-      .json({ message: "All fields (username, email, password, number) are required" });
+    return res.status(400).json({ message: "All fields (username, email, password, number) are required" });
   }
 
   if (!email.includes("@") || !email.includes("gmail.com")) {
@@ -38,7 +39,3 @@ app.post("/create-account", (req, res) => {
 
   res.json({ message: "Account created successfully!" });
 });
-
-// Export for Vercel
-export default app;
-export const handler = serverless(app);
