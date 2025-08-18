@@ -37,7 +37,4 @@ app.post('/create-account', (req, res) => {
     res.json({ message: 'Account created successfully!' });
 });
 
-// Simple health check
-app.get("/on", (req, res) => {
-    res.send({ message: "server is on" });
-});
+
