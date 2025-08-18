@@ -1,0 +1,19 @@
+{
+  "name": "createaccountapi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev":" nodemon node.js",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module",
+  "dependencies": {
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }
+}
