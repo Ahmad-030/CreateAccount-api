@@ -9,7 +9,7 @@ app.listen(5000, () => {
 
 // Root Route
 app.get("/", (req, res) => {
-  res.send({ message: "Welcome to Create Account API 🚀" });
+  res.send({ message: " API Working 🚀" });
 });
 
 // Create Account API
