@@ -19,7 +19,7 @@ async function dbConnect () {
 }
 
 dbConnect()
-
+/
 // Root Route
 app.get("/", (req, res) => {
   res.send({ message: " API Working 🚀" });
